@@ -1,10 +1,10 @@
 const list = [];
 const componentRegistry = {
-    push(item) {
+    push: function(item) {
         if (!item) return false;
         list.push(item);
     },
-    get() {
+    get: function() {
         return list;
     }
 };
