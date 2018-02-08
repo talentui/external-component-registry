@@ -1,11 +1,10 @@
-const list = [];
+const obj = {};
 const componentRegistry = {
-    push: function(item) {
-        if (!item) return false;
-        list.push(item);
+    set: function(key,value) {
+        obj[key] = value;
     },
     get: function() {
-        return list;
+        return obj;
     }
 };
 export default componentRegistry;
