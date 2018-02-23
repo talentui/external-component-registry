@@ -1,5 +1,5 @@
 const obj = {};
-let hook = null;
+var hook = null;
 const componentRegistry = {
     set: function(key,value) {
         obj[key] = value;
