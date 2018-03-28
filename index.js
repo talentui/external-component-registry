@@ -1,15 +1,20 @@
-const obj = {};
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var obj = {};
 var hook = null;
-const componentRegistry = {
-    set: function(key,value) {
+var componentRegistry = {
+    set: function set(key, value) {
         obj[key] = value;
         hook && hook(obj);
     },
-    get: function() {
+    get: function get() {
         return obj;
     },
-    setHook: function(func){
+    setHook: function setHook(func) {
         hook = func;
     }
 };
-export default componentRegistry;
+exports.default = componentRegistry;
